@@ -1,2 +1,2 @@
-print("Hello, World!")  
+sprint("Hello, World!")  
 print("BALQEES, World!")  
