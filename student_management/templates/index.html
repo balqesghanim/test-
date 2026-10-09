@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الطلاب</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>نظام إدارة الطلاب</h1>
+
+        <form id="student-form">
+            <label for="name">اسم الطالب</label>
+            <input id="name" type="text"
+                   placeholder="أدخل اسم الطالب" required>
+
+            <label for="grade">العلامة (من 100)</label>
+            <input id="grade" type="number"
+                   min="0" max="100" step="any"
+                   placeholder="أدخل العلامة" required>
+
+            <button type="submit">إضافة طالب</button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <h2>قائمة الطلاب</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>الرقم</th>
+                        <th>اسم الطالب</th>
+                        <th>العلامة</th>
+                    </tr>
+                </thead>
+                <tbody id="students-list"></tbody>
+            </table>
+        </div>
+
+        <button id="average-button" type="button">
+            حساب متوسط العلامات
+        </button>
+
+        <p id="average-result" aria-live="polite"></p>
+    </main>
+</body>
+</html>
